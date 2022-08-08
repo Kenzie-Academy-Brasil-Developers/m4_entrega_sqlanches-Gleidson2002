@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS produtos(
 );
 -- Tabela produtos_pedidos
 CREATE TABLE IF NOT EXISTS produtos_pedidos(
+  id BIGSERIAL PRIMARY KEY NOT NULL,
   pedido_id INTEGER NOT NULL,
   FOREIGN KEY (pedido_id) 
   REFERENCES pedidos(id)
